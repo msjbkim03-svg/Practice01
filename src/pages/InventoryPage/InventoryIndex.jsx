@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Outlet } from "react-router-dom";
 
 
 const InventoryIndex = () => {
@@ -14,7 +14,7 @@ const InventoryIndex = () => {
         <div onClick={()=> {navi("/admin/inventory/delete")}}>삭제(Delete)</div>
       </div>
       <div>
-      
+        <Outlet />
       </div>
     </div>
   )

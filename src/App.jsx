@@ -18,6 +18,10 @@ import MenuSub2 from './pages/MenuPage/MenuSub/MenuSub2';
 import MenuSub3 from './pages/MenuPage/MenuSub/MenuSub3';
 import MenuSub4 from './pages/MenuPage/MenuSub/MenuSub4';
 import InventoryIndex from './pages/InventoryPage/InventoryIndex';
+import InventorySub1 from './pages/InventoryPage/InventorySub/InventorySub1';
+import InventorySub2 from './pages/InventoryPage/InventorySub/InventorySub2';
+import InventorySub3 from './pages/InventoryPage/InventorySub/InventorySub3';
+import InventorySub4 from './pages/InventoryPage/InventorySub/InventorySub4';
 
 function App() {
   const [menus, setMenus] = useState([
@@ -64,10 +68,10 @@ function App() {
         </Route>
         {/* 메뉴관리 */}
         <Route path="inventory" element={<InventoryIndex />}>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
+          <Route path="read" element={<InventorySub1 stocks={stocks} />}></Route>
+          <Route path="create" element={<InventorySub2 setStocks={setStocks} />}></Route>
+          <Route path="update" element={<></>}></Route>
+          <Route path="delete" element={<InventorySub4 setStocks={setStocks} />}></Route>
         </Route>
         {/* 재고관리 */}
         <Route path="orders" element={<OrdersIndex />}>
