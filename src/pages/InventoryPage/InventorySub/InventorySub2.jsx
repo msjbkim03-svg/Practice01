@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 
 const InventorySub2 = ({setStocks}) => {
 
@@ -14,7 +14,7 @@ const InventorySub2 = ({setStocks}) => {
   })
 
   const Add = () => {
-    setStocks(prev => [...prev,newMenu]);
+    setStocks(prev => [...prev,newInventory]);
     setnewInventory({id: "",name: "",stock: ""});
   }
     return (

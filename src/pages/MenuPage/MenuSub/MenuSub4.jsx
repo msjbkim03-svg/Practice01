@@ -1,6 +1,6 @@
+import { useState } from "react";
 
-
-const MenuSub4 = () => {
+const MenuSub4 = ({setMenus,menus}) => {
 
     const [deltarget,setDeltarget] = useState("");
 
