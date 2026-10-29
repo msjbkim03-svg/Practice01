@@ -5,6 +5,11 @@ import Admin from './pages/Admin/Admin';
 import OrdersIndex from './pages/Orders/OrdersIndex';
 import OrdersRead from './pages/Orders/OrdersRead';
 import OrdersCreate from './pages/Orders/OrdersCreate';
+import MenuIndex from './pages/MenuPage/MenuIndex';
+import MenuSub1 from './pages/MenuPage/MenuSub/MenuSub1';
+import MenuSub2 from './pages/MenuPage/MenuSub/MenuSub2';
+import MenuSub3 from './pages/MenuPage/MenuSub/MenuSub3';
+import MenuSub4 from './pages/MenuPage/MenuSub/MenuSub4';
 
 function App() {
   const [menus, setMenus] = useState([
@@ -43,18 +48,19 @@ function App() {
       <Route path="/admin" element={<Admin />}>
         <Route index element={<></>}></Route>
         {/* 대시보드 */}
-        <Route path="munus" element={<></>}>
+        <Route path="menus" element={<MenuIndex />}>
+          <Route path="read" element={<MenuSub1 menus={menus} />}></Route>
+          <Route path="create" element={<MenuSub2 setMenus={setMenus} />}></Route>
+          <Route path="update" element={<MenuSub3 />}></Route>
+          <Route path="delete" element={<MenuSub4 />}></Route>
+        </Route>
+        {/* 메뉴관리 */}
+        <Route path="" element={<></>}>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
         </Route>
-        {/* 메뉴관리 */}
-        <Route path="inventory" element={<OrdersIndex />}>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route></Route>
         {/* 재고관리 */}
         <Route path="orders" element={<OrdersIndex />}>
           <Route path="read" element={<OrdersRead orders={orders}/>}></Route>

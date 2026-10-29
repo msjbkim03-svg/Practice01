@@ -1,6 +1,6 @@
 
 
-const MenuSub = ({menus}) => {
+const MenuSub1 = ({menus}) => {
 
 
     return (
@@ -23,4 +23,4 @@ const MenuSub = ({menus}) => {
     );
 };
 
-export default MenuSub;
+export default MenuSub1;
