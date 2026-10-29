@@ -8,7 +8,7 @@ const Admin = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <p>매장 관리 시스템</p>
-        <button>로그아웃</button>
+        <button onClick={() => {navi("/")}}>로그아웃</button>
       </div>
       <div className={styles.body}>
         <div className={styles.menu}>
@@ -16,7 +16,7 @@ const Admin = () => {
           <div onClick={()=>{navi("/admin/menus")}}>메뉴관리</div>
           <div onClick={()=>{navi("/admin/inventory")}}>재고관리</div>
           <div onClick={() => {navi("/admin/orders")}}>주문관리</div>
-          <div>직원관리</div>
+          <div onClick={() => {navi("/admin/staffs")}}>직원관리</div>
         </div>
         <div className={styles.contents}>
           <Outlet />

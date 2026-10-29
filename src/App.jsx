@@ -7,6 +7,11 @@ import OrdersRead from './pages/Orders/OrdersRead';
 import OrdersCreate from './pages/Orders/OrdersCreate';
 import OrdersUpdate from './pages/Orders/OrdersUpdate';
 import OrdersDelete from './pages/Orders/OrdersDelete';
+import StaffsIndex from './pages/Staffs/StaffsIndex';
+import StaffsRead from './pages/Staffs/StaffsRead';
+import StaffsCreate from './pages/Staffs/StaffsCreate';
+import StaffsUpdate from './pages/Staffs/StaffsUpdate';
+import StaffsDelete from './pages/Staffs/StaffsDelete';
 import MenuIndex from './pages/MenuPage/MenuIndex';
 import MenuSub1 from './pages/MenuPage/MenuSub/MenuSub1';
 import MenuSub2 from './pages/MenuPage/MenuSub/MenuSub2';
@@ -72,11 +77,11 @@ function App() {
           <Route path="delete" element={<OrdersDelete setOrders={setOrders} />}></Route>
         </Route>
         {/* 주문관리 */}
-        <Route path="orders" element={<OrdersIndex />}>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
-          <Route path="" element={<></>}></Route>
+        <Route path="staffs" element={<StaffsIndex />}>
+          <Route path="read" element={<StaffsRead staffs={staffs}/>}></Route>
+          <Route path="create" element={<StaffsCreate setStaffs={setStaffs} />}></Route>
+          <Route path="update" element={<StaffsUpdate setStaffs={setStaffs} />}></Route>
+          <Route path="delete" element={<StaffsDelete setStaffs={setStaffs} />}></Route>
         </Route>
         {/* 직원관리 */}
       </Route>
