@@ -1,6 +1,6 @@
 
 
-const Sub4 = () => {
+const MenuSub4 = () => {
 
     const [deltarget,setDeltarget] = useState("");
 
@@ -10,6 +10,11 @@ const Sub4 = () => {
     }
 
     return (
-        <input type="text" placeholder="삭제할 id" onChange={e => {setDeltarget(e.target.value)}} />
+        <div>
+            <input type="text" placeholder="삭제할 id" onChange={e => setDeltarget(e.target.value)} value={deltarget} />
+            <button onClick={handleDelete}>삭제</button>
+        </div>
     )
 }
+
+export default MenuSub4;

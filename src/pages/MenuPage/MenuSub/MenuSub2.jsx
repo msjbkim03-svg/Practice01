@@ -1,6 +1,6 @@
 
 
-const Sub2 = () => {
+const MenuSub2 = () => {
 
   const [newMenu,setnewMenu] = useState({
     id: "",
@@ -28,4 +28,4 @@ const Sub2 = () => {
     );
   };
 
-  export default Sub2;
+  export default MenuSub2;
