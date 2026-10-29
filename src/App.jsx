@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import { useState } from 'react';
 import Admin from './pages/Admin/Admin';
+import DashBoard from './pages/DashBoard/DashBoard';
 import OrdersIndex from './pages/Orders/OrdersIndex';
 import OrdersRead from './pages/Orders/OrdersRead';
 import OrdersCreate from './pages/Orders/OrdersCreate';
@@ -58,7 +59,7 @@ function App() {
       <Route index element={<Login />}></Route>
       {/* 로그인 */}
       <Route path="/admin" element={<Admin />}>
-        <Route index element={<></>}></Route>
+        <Route index element={<DashBoard menus={menus} stocks={stocks} orders={orders} staffs={staffs}/>}></Route>
         {/* 대시보드 */}
         <Route path="menus" element={<MenuIndex />}>
           <Route path="read" element={<MenuSub1 menus={menus} />}></Route>
