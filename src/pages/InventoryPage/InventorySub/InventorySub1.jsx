@@ -1,6 +1,6 @@
 
 
-const InventorySub = ({stocks}) => {
+const InventorySub1 = ({stocks}) => {
 
     return (
         <table border={1}>
@@ -22,4 +22,4 @@ const InventorySub = ({stocks}) => {
     )
 }
 
-export default InventorySub;
+export default InventorySub1;

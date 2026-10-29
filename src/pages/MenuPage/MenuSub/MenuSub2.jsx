@@ -1,6 +1,6 @@
+import { useState } from "react";
 
-
-const MenuSub2 = () => {
+const MenuSub2 = ({setMenus}) => {
 
   const [newMenu,setnewMenu] = useState({
     id: "",
