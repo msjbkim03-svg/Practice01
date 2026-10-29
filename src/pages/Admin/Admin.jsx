@@ -13,8 +13,8 @@ const Admin = () => {
       <div className={styles.body}>
         <div className={styles.menu}>
           <div>대시보드</div>
-          <div>메뉴관리</div>
-          <div>재고관리</div>
+          <div onClick={()=>{navi("/admin/menus")}}>메뉴관리</div>
+          <div onClick={()=>{navi("/admin/inventory")}}>재고관리</div>
           <div onClick={() => {navi("/admin/orders")}}>주문관리</div>
           <div>직원관리</div>
         </div>
