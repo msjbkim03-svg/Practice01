@@ -68,7 +68,7 @@ function App() {
           <Route path="read" element={<OrdersRead orders={orders}/>}></Route>
           <Route path="create" element={<OrdersCreate setOrders={setOrders} />}></Route>
           <Route path="update" element={<OrdersUpdate setOrders={setOrders} />}></Route>
-          <Route path="delete" element={<OrdersDelete />}></Route>
+          <Route path="delete" element={<OrdersDelete setOrders={setOrders} />}></Route>
         </Route>
         {/* 주문관리 */}
         <Route path="orders" element={<OrdersIndex />}>
