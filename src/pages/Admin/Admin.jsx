@@ -1,6 +1,9 @@
 import styles from './Admin.module.css';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const Admin = () => {
+  const navi = useNavigate();
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -12,10 +15,12 @@ const Admin = () => {
           <div>대시보드</div>
           <div>메뉴관리</div>
           <div>재고관리</div>
-          <div>주문관리</div>
+          <div onClick={() => {navi("/admin/orders")}}>주문관리</div>
           <div>직원관리</div>
         </div>
-        <div className={styles.contents}>내용 나와라 얍</div>
+        <div className={styles.contents}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );

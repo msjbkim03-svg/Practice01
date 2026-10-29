@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import { useState } from 'react';
 import Admin from './pages/Admin/Admin';
+import OrdersIndex from './pages/Orders/OrdersIndex';
 
 function App() {
   const [menus, setMenus] = useState([
@@ -53,7 +54,7 @@ function App() {
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route></Route>
         {/* 재고관리 */}
-        <Route path="" element={<></>}>
+        <Route path="orders" element={<OrdersIndex />}>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
