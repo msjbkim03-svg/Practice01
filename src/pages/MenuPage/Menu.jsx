@@ -1,5 +1,5 @@
 import styles from './Admin.module.css';
-
+import {Outlet } from "react-router-dom"
 const Admin = () => {
   return (
     <div className={styles.container}>
@@ -15,7 +15,7 @@ const Admin = () => {
           <div>주문관리</div>
           <div>직원관리</div>
         </div>
-        <div className={styles.contents}>내용 나와라 얍</div>
+        <div className={styles.contents}><Outlet /></div>
       </div>
     </div>
   );

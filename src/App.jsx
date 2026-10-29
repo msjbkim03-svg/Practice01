@@ -48,20 +48,20 @@ function App() {
           <Route path="" element={<></>}></Route>
         </Route>
         {/* 메뉴관리 */}
-        <Route path="" element={<></>}>
+        <Route path="menus" element={<OrdersIndex />}>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route></Route>
         {/* 재고관리 */}
-        <Route path="orders" element={<OrdersIndex />}>
+        <Route path="inventory" element={<OrdersIndex />}>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
         </Route>
         {/* 주문관리 */}
-        <Route path="" element={<></>}>
+        <Route path="orders" element={<OrdersIndex />}>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
           <Route path="" element={<></>}></Route>
