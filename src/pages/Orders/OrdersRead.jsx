@@ -1,6 +1,8 @@
+import styles from './OrdersRead.module.css';
+
 const OrdersRead = ({ orders }) => {
   return (
-    <div className={StyleSheet.container}>
+    <div className={styles.container}>
       <table>
         <thead>
           <tr>

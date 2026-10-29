@@ -5,6 +5,8 @@ import Admin from './pages/Admin/Admin';
 import OrdersIndex from './pages/Orders/OrdersIndex';
 import OrdersRead from './pages/Orders/OrdersRead';
 import OrdersCreate from './pages/Orders/OrdersCreate';
+import OrdersUpdate from './pages/Orders/OrdersUpdate';
+import OrdersDelete from './pages/Orders/OrdersDelete';
 import MenuIndex from './pages/MenuPage/MenuIndex';
 import MenuSub1 from './pages/MenuPage/MenuSub/MenuSub1';
 import MenuSub2 from './pages/MenuPage/MenuSub/MenuSub2';
@@ -65,8 +67,8 @@ function App() {
         <Route path="orders" element={<OrdersIndex />}>
           <Route path="read" element={<OrdersRead orders={orders}/>}></Route>
           <Route path="create" element={<OrdersCreate setOrders={setOrders} />}></Route>
-          <Route path="update" element={<></>}></Route>
-          <Route path="delete" element={<></>}></Route>
+          <Route path="update" element={<OrdersUpdate setOrders={setOrders} />}></Route>
+          <Route path="delete" element={<OrdersDelete />}></Route>
         </Route>
         {/* 주문관리 */}
         <Route path="orders" element={<OrdersIndex />}>

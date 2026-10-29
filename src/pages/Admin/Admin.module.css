@@ -17,6 +17,7 @@
   border: 1px solid black;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
 }
 
 .container .body {
