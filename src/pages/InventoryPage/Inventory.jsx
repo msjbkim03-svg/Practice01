@@ -1,6 +1,7 @@
 import styles from './Admin.module.css';
+import { Outlet } from 'react-router-dom';
 
-const Admin = () => {
+const Inventory = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -21,4 +22,4 @@ const Admin = () => {
   );
 }
 
-export default Admin;
+export default Inventory;
